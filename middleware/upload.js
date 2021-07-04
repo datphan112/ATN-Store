@@ -4,7 +4,7 @@ const {GridFsStorage} = require('multer-gridfs-storage');
 
 
 var storage = new GridFsStorage({
-  url: "mongodb+srv://phanvandat:phanvandat123@cluster0.n8rzr.mongodb.net/ATN-Store",
+  url: "mongodb+srv://phanvandat:phanvandat123@cluster0.n8rzr.mongodb.net/ATN-Store?retryWrites=true&w=majority",
   options: { useNewUrlParser: true, useUnifiedTopology: true },
   file: (req, file) => {
     const match = ["image/png", "image/jpeg"];
